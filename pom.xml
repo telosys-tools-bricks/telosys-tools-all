@@ -33,11 +33,16 @@
 							<goal>shade</goal>
 						</goals>
  						<configuration>
- 						<!-- 
- 							No configuration, keep the standard artefact names :
- 							target/original-telosys-tools-all-X.X.X.jar ( void file, with pom.xml only )
- 							target/telosys-tools-all-X.X.X.jar ( uber jar file, with all classes )
- 						 -->
+							<artifactSet>
+								<excludes>
+									<exclude>junit:junit</exclude>
+								</excludes>
+							</artifactSet>
+							<!-- 
+								No name configuration, keep the standard artefact names :
+								target/original-telosys-tools-all-X.X.X.jar ( void file, with pom.xml only )
+								target/telosys-tools-all-X.X.X.jar ( uber jar file, with all classes )
+							 -->
 						</configuration>
 					</execution>
 				</executions>
