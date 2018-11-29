@@ -12,7 +12,7 @@
     <properties>
     	<!-- the "global version  -->
     	<!-- Same version for "telosys-tools-api.jar" and "telosys-tools-all.jar" (the fat jar) --> 
-		<global.version>3.0.1</global.version> 
+		<global.version>3.1.0</global.version> 
     </properties>
 
 	<dependencies>
