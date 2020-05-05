@@ -4,22 +4,26 @@
 
 	<groupId>org.telosys</groupId>
 	<artifactId>telosys-tools-all</artifactId>
-	<version>3.1.2</version>
+	<version>3.2.2</version>
 	<packaging>jar</packaging>
 
 	<name>telosys-tools-all</name>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	
 	<dependencies>
 		<dependency>
 			<groupId>org.telosys</groupId>
 			<artifactId>telosys-tools-api</artifactId> <!-- TELOSYS-API : pull all other Telosys dependencies -->
-			<version>3.1.0</version> 
+			<version>3.2.2</version>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-		
+
 			<plugin>
 				<!-- Uber JAR (fat JAR) creation -->
 				<groupId>org.apache.maven.plugins</groupId>
@@ -32,31 +36,29 @@
 						<goals>
 							<goal>shade</goal>
 						</goals>
- 						<configuration>
+						<configuration>
 							<artifactSet>
 								<excludes>
 									<exclude>junit:junit</exclude>
 								</excludes>
 							</artifactSet>
-							<!-- 
-								No name configuration, keep the standard artefact names :
-								target/original-telosys-tools-all-X.X.X.jar ( void file, with pom.xml only )
-								target/telosys-tools-all-X.X.X.jar ( uber jar file, with all classes )
-							 -->
+							<!-- No name configuration, keep the standard artefact names : target/original-telosys-tools-all-X.X.X.jar 
+								( void file, with pom.xml only ) target/telosys-tools-all-X.X.X.jar ( uber 
+								jar file, with all classes ) -->
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 
-            <plugin> <!-- unused (no compilation) just to avoid Eclipse warning -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
+			<plugin> <!-- unused (no compilation) just to avoid Eclipse warning -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
 
 		</plugins>
 	</build>
