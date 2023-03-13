@@ -39,7 +39,9 @@
 						<configuration>
 							<artifactSet>
 								<excludes>
+									<!-- "junit" is a dependency in "jsonsimple" with "compile" scope, so it must be excluded -->
 									<exclude>junit:junit</exclude>
+									<exclude>org.hamcrest:hamcrest-core</exclude>
 								</excludes>
 							</artifactSet>
 							<!-- No name configuration, keep the standard artefact names : target/original-telosys-tools-all-X.X.X.jar 
