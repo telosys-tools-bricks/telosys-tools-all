@@ -4,7 +4,7 @@
 
 	<groupId>org.telosys</groupId>
 	<artifactId>telosys-tools-all</artifactId>
-	<version>4.0.1</version>
+	<version>4.1.0</version>
 	<packaging>jar</packaging>
 
 	<name>telosys-tools-all</name>
@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>org.telosys</groupId>
 			<artifactId>telosys-tools-api</artifactId> <!-- TELOSYS-API : pull all other Telosys dependencies -->
-			<version>4.0.1</version>
+			<version>4.1.0</version>
 		</dependency>
 	</dependencies>
 
