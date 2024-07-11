@@ -17,7 +17,7 @@
 		<dependency>
 			<groupId>org.telosys</groupId>
 			<artifactId>telosys-tools-api</artifactId> <!-- TELOSYS-API : pull all other Telosys dependencies -->
-			<version>4.1.0</version>
+			<version>4.2.0</version>
 		</dependency>
 	</dependencies>
 
